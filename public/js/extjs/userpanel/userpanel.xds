@@ -1,0 +1,44 @@
+{
+    "name": "userpanel",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost/Univer/public/js/extjs/userpanel/",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 239,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "3626c86e-cb56-415f-a848-5a099e716c54",
+            "1eb47535-2e1f-4061-91bb-c09a09fd5775",
+            "3d6cc22f-a5a2-40a8-b327-955114d14867"
+        ],
+        "store": [
+            "a3b4071e-8384-4144-8e4b-cae3e5c4a79b"
+        ],
+        "controller": [],
+        "model": [
+            "80f5e06f-3ee6-4f61-ae33-7a23845855d3"
+        ],
+        "resource": [
+            "b40fc9bf-7594-4bd4-804d-bda5eb57fa00",
+            "0fab646f-c067-4332-be78-0c6e8890c1b4"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
