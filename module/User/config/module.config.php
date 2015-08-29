@@ -32,6 +32,17 @@ return array(
                             'defaults' => array(),
                         ),
                     ),
+                    'default_json' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => '/[:controller[/:action]][:.json]',
+                            'constraints' => array(
+                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                            ),
+                            'defaults' => array(),
+                        ),
+                    ),
                 ),
 
             ),
@@ -40,9 +51,9 @@ return array(
 
     ),
     'view_manager' => array(
-        'template_path_stack' => array(
-            'user' => __DIR__.'/../view',
-        ),
+        'template_path_stack' => array('user' => __DIR__.'/../view',),
+        //'template_map' => array('layout/index' => __DIR__.'/../view/layout/layout.phtml',),
+        'strategies' => array('ViewJsonStrategy',),
     ),
 
 );

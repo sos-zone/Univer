@@ -20,7 +20,11 @@ Ext.define('MyApp.view.MyGridPanel', {
     requires: [
         'MyApp.view.MyGridPanelViewModel',
         'Ext.view.Table',
-        'Ext.grid.column.Column'
+        'Ext.grid.column.Column',
+        'Ext.form.field.Text',
+        'Ext.toolbar.Toolbar',
+        'Ext.button.Button',
+        'Ext.grid.plugin.RowEditing'
     ],
 
     viewModel: {
@@ -30,6 +34,7 @@ Ext.define('MyApp.view.MyGridPanel', {
     width: 400,
     title: 'My Grid Panel',
     store: 'UserStore',
+    defaultListenerScope: true,
 
     columns: [
         {
@@ -39,9 +44,65 @@ Ext.define('MyApp.view.MyGridPanel', {
         },
         {
             xtype: 'gridcolumn',
+            width: 160,
             dataIndex: 'user_name',
-            text: 'User Name'
+            text: 'User Name',
+            editor: {
+                xtype: 'textfield'
+            }
         }
-    ]
+    ],
+    dockedItems: [
+        {
+            xtype: 'toolbar',
+            dock: 'top',
+            width: 400,
+            items: [
+                {
+                    xtype: 'button',
+                    text: 'load',
+                    listeners: {
+                        click: 'onButtonClick'
+                    }
+                },
+                {
+                    xtype: 'button',
+                    text: 'save',
+                    listeners: {
+                        click: 'onButtonClick1'
+                    }
+                }
+            ]
+        }
+    ],
+    plugins: [
+        {
+            ptype: 'rowediting'
+        }
+    ],
+
+    onButtonClick: function(button, e, eOpts) {
+        var custStore = Ext.getStore('UserStore');
+        if (custStore != null) {
+            custStore.load();
+            var UserStore = Ext.getStore("UserStore");
+
+            Ext.Msg.alert('Status', "REST Loaded successfully, store: " + UserStore);
+            console.log("Load ok"); //logs go where??
+        } else {
+            Ext.Msg.show({
+                title:'Load Failed',
+                msg: 'Cannot find UserStore',
+                buttons: Ext.Msg.YESNOCANCEL,
+                fn: processResult,
+                animEl: 'elId'
+            });
+        }
+    },
+
+    onButtonClick1: function(button, e, eOpts) {
+        var custStore = Ext.getStore('UserStore');
+        custStore.sync();
+    }
 
 });

@@ -24,7 +24,8 @@ Ext.application({
         'UserModel'
     ],
     stores: [
-        'UserStore'
+        'UserStore',
+        'MyJsonPStore'
     ],
     views: [
         'MyGridPanel'

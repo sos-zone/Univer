@@ -1,5 +1,5 @@
 {
-    "type": "jsonstore",
+    "type": "jsonpstore",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,16 +7,15 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "autoSync": true,
-        "designer|userClassName": "UserStore",
+        "designer|userClassName": "MyJsonPStore",
         "model": "UserModel",
-        "storeId": "UserStore"
+        "storeId": "MyJsonPStore"
     },
-    "name": "MyJsonStore",
-    "designerId": "a3b4071e-8384-4144-8e4b-cae3e5c4a79b",
+    "name": "MyJsonPStore",
+    "designerId": "83b97b93-cf88-4276-adf9-8ec324078df9",
     "cn": [
         {
-            "type": "Ext.data.proxy.Ajax",
+            "type": "Ext.data.proxy.JsonP",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -25,8 +24,8 @@
             "userConfig": {
                 "url": "http://univer/user/index/data.json"
             },
-            "name": "MyAjaxProxy",
-            "designerId": "1ce301b0-37fe-4391-af9b-ca42afa56db5",
+            "name": "MyJsonPProxy",
+            "designerId": "55e3c30f-fbaf-4057-b904-45cc0eca6161",
             "cn": [
                 {
                     "type": "Ext.data.reader.Json",
@@ -35,8 +34,8 @@
                         "type": "object"
                     },
                     "codeClass": null,
-                    "name": "MyJsonReader",
-                    "designerId": "e0141ea0-616e-43b3-ab7f-0c52e5aa2edc"
+                    "name": "MyJsonReader1",
+                    "designerId": "eb7d22b4-ce70-494e-ba71-de45a65e6197"
                 }
             ]
         }

@@ -22,32 +22,31 @@
 
 
 <h1>Welcome2</h1>
+<a href="/user/index/selectname">Select page</a>
 <p>
     <a href="<?php echo $this->url('user', array('action'=>'add'));?>">Add new user</a>
 </p>
-
-
+<pre>
 <?php
-foreach($user as $user)
+if(isset($_POST))// && !empty($_POST['data']))
 {
-    echo $user->user_name. "<br />";
-
-
+print_r($_POST);
 }
-$test = array("111","222","333");
-echo json_encode($test);
+echo $_GET['id'];
 ?>
+</pre>
+
 
 <table class="table">
     <tr>
-        <th>User</th>
-        <th>City</th>
+        <th>user_id</th>
+        <th>user_name</th>
         <th>&nbsp;</th>
     </tr>
     <?php foreach ($user as $user) : ?>
         <tr>
+            <td><?php echo $this->escapeHtml($user->user_id);?></td>
             <td><?php echo $this->escapeHtml($user->user_name);?></td>
-            <td><?php echo $this->escapeHtml($city->city_name);?></td>
             <td>
                 <a href="<?php echo $this->url('user',
                     array('action'=>'edit', 'user_id' => $user->user_id));?>">Edit</a>
@@ -57,8 +56,6 @@ echo json_encode($test);
         </tr>
     <?php endforeach; ?>
 </table>
-
-
 
 </body>
 </html>

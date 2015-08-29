@@ -18,7 +18,7 @@ return array(
         'username' => 'root',
         'password' => 'vtufnjg',
         'driver_options' => array(
-            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''  //обращаемся к БД используя кодировку UTF8
         ),
     ),
     'service_manager' => array(
