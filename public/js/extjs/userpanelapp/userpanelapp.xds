@@ -1,0 +1,65 @@
+{
+    "name": "userpanelapp",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost/Univer/public/js/extjs/userpanelapp/",
+        "exportPath": "",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 239,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "76a4f79f-3e20-46da-acbc-0d1dc8136a5d",
+            "1a9b1108-505d-4f58-aaca-d24a06a30baf",
+            "25398944-c798-4183-8476-31e86d56027e",
+            "1938817c-95ca-44a1-820e-b2be4cdd10a1",
+            "cb61de70-bc3e-4924-85a7-ff693da8e60d",
+            "7c8e0238-05af-4cd0-ab07-f4632c941d64",
+            "74dc581c-60ce-4880-a25d-3424f3715d73",
+            "082485e8-d677-4c44-acfa-f3d5f6caa6e2",
+            "86709ed4-9937-4d8e-ac2a-497e89597c40",
+            "6e457d70-03ad-4c6f-931d-77cbe2a26fca",
+            "f5d97b8d-fa80-4ebf-b5c1-84d285d56b43",
+            "bc85fd94-13d8-4884-addf-03b543a21ab4"
+        ],
+        "store": [
+            "ff45ef83-f42c-46bc-a8b8-04a3299637fa"
+        ],
+        "controller": [
+            "d7eab1c3-5b0c-41e8-8087-7cb6c742f256"
+        ],
+        "model": [
+            "4a2c6491-dfcb-4273-b9f1-f3ee897fcf08"
+        ],
+        "resource": [
+            "1f6ae646-93b8-4c54-92f7-3cd654dc947f",
+            "e053d796-3aad-47e5-86c5-e9d9a9808362",
+            "38864a01-76b7-4b26-bf89-8fe3898dbd29"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

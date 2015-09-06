@@ -1,0 +1,73 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "userpanel",
+        "designer|userClassName": "UserPanelViewModel"
+    },
+    "designerId": "3b3fc17f-d82a-4cef-b7ec-5ecfdddad0d7",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"user_id\":\"sed\",\"user_name\":\"modi\",\"user_educ\":\"est\",\"city_name\":\"veniam\"},{\"user_id\":\"et\",\"user_name\":\"autem\",\"user_educ\":\"rerum\",\"city_name\":\"perspiciatis\"},{\"user_id\":\"quia\",\"user_name\":\"et\",\"user_educ\":\"consequatur\",\"city_name\":\"error\"},{\"user_id\":\"qui\",\"user_name\":\"ad\",\"user_educ\":\"ullam\",\"city_name\":\"eos\"},{\"user_id\":\"nulla\",\"user_name\":\"architecto\",\"user_educ\":\"maxime\",\"city_name\":\"similique\"},{\"user_id\":\"atque\",\"user_name\":\"omnis\",\"user_educ\":\"voluptatibus\",\"city_name\":\"qui\"},{\"user_id\":\"mollitia\",\"user_name\":\"ipsum\",\"user_educ\":\"esse\",\"city_name\":\"vel\"},{\"user_id\":\"voluptas\",\"user_name\":\"expedita\",\"user_educ\":\"earum\",\"city_name\":\"est\"},{\"user_id\":\"voluptatem\",\"user_name\":\"sed\",\"user_educ\":\"iusto\",\"city_name\":\"necessitatibus\"},{\"user_id\":\"quia\",\"user_name\":\"praesentium\",\"user_educ\":\"modi\",\"city_name\":\"asperiores\"},{\"user_id\":\"rerum\",\"user_name\":\"perspiciatis\",\"user_educ\":\"itaque\",\"city_name\":\"in\"},{\"user_id\":\"eos\",\"user_name\":\"ea\",\"user_educ\":\"tempora\",\"city_name\":\"et\"},{\"user_id\":\"sit\",\"user_name\":\"sed\",\"user_educ\":\"fuga\",\"city_name\":\"dolor\"},{\"user_id\":\"error\",\"user_name\":\"consequatur\",\"user_educ\":\"inventore\",\"city_name\":\"consequatur\"},{\"user_id\":\"dolores\",\"user_name\":\"et\",\"user_educ\":\"qui\",\"city_name\":\"ad\"},{\"user_id\":\"in\",\"user_name\":\"eaque\",\"user_educ\":\"quia\",\"city_name\":\"rerum\"},{\"user_id\":\"earum\",\"user_name\":\"perspiciatis\",\"user_educ\":\"ducimus\",\"city_name\":\"ipsa\"},{\"user_id\":\"animi\",\"user_name\":\"enim\",\"user_educ\":\"voluptate\",\"city_name\":\"voluptates\"},{\"user_id\":\"corporis\",\"user_name\":\"est\",\"user_educ\":\"incidunt\",\"city_name\":\"voluptas\"},{\"user_id\":\"illo\",\"user_name\":\"cumque\",\"user_educ\":\"et\",\"city_name\":\"cupiditate\"},{\"user_id\":\"quia\",\"user_name\":\"dolor\",\"user_educ\":\"ut\",\"city_name\":\"numquam\"},{\"user_id\":\"eum\",\"user_name\":\"laboriosam\",\"user_educ\":\"rerum\",\"city_name\":\"eum\"},{\"user_id\":\"quasi\",\"user_name\":\"sunt\",\"user_educ\":\"est\",\"city_name\":\"excepturi\"},{\"user_id\":\"voluptatum\",\"user_name\":\"esse\",\"user_educ\":\"eos\",\"city_name\":\"error\"},{\"user_id\":\"eos\",\"user_name\":\"quo\",\"user_educ\":\"aut\",\"city_name\":\"numquam\"},{\"user_id\":\"illum\",\"user_name\":\"voluptatibus\",\"user_educ\":\"rem\",\"city_name\":\"recusandae\"},{\"user_id\":\"consequatur\",\"user_name\":\"necessitatibus\",\"user_educ\":\"nobis\",\"city_name\":\"facere\"},{\"user_id\":\"et\",\"user_name\":\"dicta\",\"user_educ\":\"nemo\",\"city_name\":\"beatae\"},{\"user_id\":\"ab\",\"user_name\":\"eaque\",\"user_educ\":\"inventore\",\"city_name\":\"porro\"},{\"user_id\":\"in\",\"user_name\":\"dolorum\",\"user_educ\":\"explicabo\",\"city_name\":\"id\"}]"
+                ],
+                "model": "UserModel",
+                "name": "userModels"
+            },
+            "name": "userModels",
+            "designerId": "837b40ac-3e11-4b7a-b8ec-ba48ac47fff8",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy",
+                    "designerId": "d13d9320-0539-4f29-9d6b-ed3bb4141774"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"user_id\":\"perferendis\",\"user_name\":\"sed\",\"user_educ\":\"vero\",\"city_name\":\"est\"},{\"user_id\":\"iure\",\"user_name\":\"nam\",\"user_educ\":\"aut\",\"city_name\":\"necessitatibus\"},{\"user_id\":\"est\",\"user_name\":\"illum\",\"user_educ\":\"qui\",\"city_name\":\"enim\"},{\"user_id\":\"molestias\",\"user_name\":\"deserunt\",\"user_educ\":\"sit\",\"city_name\":\"excepturi\"},{\"user_id\":\"commodi\",\"user_name\":\"corrupti\",\"user_educ\":\"rerum\",\"city_name\":\"tempora\"},{\"user_id\":\"enim\",\"user_name\":\"nihil\",\"user_educ\":\"totam\",\"city_name\":\"vero\"},{\"user_id\":\"dolorem\",\"user_name\":\"aut\",\"user_educ\":\"molestiae\",\"city_name\":\"earum\"},{\"user_id\":\"saepe\",\"user_name\":\"officia\",\"user_educ\":\"qui\",\"city_name\":\"illo\"},{\"user_id\":\"earum\",\"user_name\":\"aut\",\"user_educ\":\"amet\",\"city_name\":\"sapiente\"},{\"user_id\":\"dolorem\",\"user_name\":\"voluptatem\",\"user_educ\":\"harum\",\"city_name\":\"quas\"},{\"user_id\":\"maxime\",\"user_name\":\"et\",\"user_educ\":\"perferendis\",\"city_name\":\"vero\"},{\"user_id\":\"dolorum\",\"user_name\":\"nostrum\",\"user_educ\":\"voluptatem\",\"city_name\":\"qui\"},{\"user_id\":\"quibusdam\",\"user_name\":\"occaecati\",\"user_educ\":\"laborum\",\"city_name\":\"dolor\"},{\"user_id\":\"eum\",\"user_name\":\"inventore\",\"user_educ\":\"et\",\"city_name\":\"qui\"},{\"user_id\":\"esse\",\"user_name\":\"sunt\",\"user_educ\":\"voluptatum\",\"city_name\":\"numquam\"},{\"user_id\":\"expedita\",\"user_name\":\"quaerat\",\"user_educ\":\"nobis\",\"city_name\":\"veritatis\"},{\"user_id\":\"maiores\",\"user_name\":\"in\",\"user_educ\":\"commodi\",\"city_name\":\"in\"},{\"user_id\":\"officia\",\"user_name\":\"quam\",\"user_educ\":\"quasi\",\"city_name\":\"voluptatem\"},{\"user_id\":\"dignissimos\",\"user_name\":\"quasi\",\"user_educ\":\"eligendi\",\"city_name\":\"maxime\"},{\"user_id\":\"quo\",\"user_name\":\"neque\",\"user_educ\":\"facilis\",\"city_name\":\"possimus\"},{\"user_id\":\"sint\",\"user_name\":\"dolor\",\"user_educ\":\"molestiae\",\"city_name\":\"aut\"},{\"user_id\":\"ducimus\",\"user_name\":\"laudantium\",\"user_educ\":\"necessitatibus\",\"city_name\":\"porro\"},{\"user_id\":\"provident\",\"user_name\":\"doloribus\",\"user_educ\":\"vel\",\"city_name\":\"dolorem\"},{\"user_id\":\"delectus\",\"user_name\":\"vitae\",\"user_educ\":\"animi\",\"city_name\":\"accusantium\"},{\"user_id\":\"non\",\"user_name\":\"et\",\"user_educ\":\"dolorum\",\"city_name\":\"incidunt\"},{\"user_id\":\"voluptatem\",\"user_name\":\"aut\",\"user_educ\":\"eos\",\"city_name\":\"nisi\"},{\"user_id\":\"quasi\",\"user_name\":\"voluptas\",\"user_educ\":\"asperiores\",\"city_name\":\"cumque\"},{\"user_id\":\"praesentium\",\"user_name\":\"totam\",\"user_educ\":\"nemo\",\"city_name\":\"quis\"},{\"user_id\":\"dolorem\",\"user_name\":\"eos\",\"user_educ\":\"veniam\",\"city_name\":\"omnis\"},{\"user_id\":\"repellat\",\"user_name\":\"aut\",\"user_educ\":\"facilis\",\"city_name\":\"sit\"}]"
+                ],
+                "model": "UserModel",
+                "name": "userModels"
+            },
+            "name": "userModels",
+            "designerId": "7a01aece-f6b3-4f42-aa50-95ae329e2d9e",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy1",
+                    "designerId": "e9fdd5e4-e016-4acb-8bfd-d725452568fb"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UserJsonStore",
+        "model": "UserModel",
+        "storeId": "UserJsonStore"
+    },
+    "name": "MyJsonStore",
+    "designerId": "e0ab35aa-27af-428b-b96f-e624352c74f1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://univer/user/index/data"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "66dc8815-5d7b-47b7-aa7a-15f3ebf419c0",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader1",
+                    "designerId": "2a8adff9-bc51-4cc1-bbf2-2a758c78b89f"
+                }
+            ]
+        }
+    ]
+}

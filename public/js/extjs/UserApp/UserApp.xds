@@ -1,0 +1,66 @@
+{
+    "name": "UserApp",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost/Univer/public/js/extjs/UserApp/",
+        "exportPath": "",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 239,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "24d54036-e8cd-472f-b986-684cf142db50",
+            "3b3fc17f-d82a-4cef-b7ec-5ecfdddad0d7",
+            "6dd8b4ca-110e-4c16-8c9f-c5b495535fb3",
+            "8312165e-f480-499b-b6ae-e53c9c8c8562",
+            "d8936be4-b8a7-4d26-8613-1dec4f25ce39",
+            "5b6244b3-6496-492f-baa5-cdae65801199",
+            "2b32bc0c-dc70-400d-9b80-c75623cb03b7",
+            "4782c92e-2470-44f6-a2b4-bc2f34f24922",
+            "ea310d65-f8ba-4c1d-96db-bdd7b99a997a",
+            "61fc30f2-9b8d-46b7-8d8a-d41e6de4bcd1",
+            "0adc8eb5-a6af-4e14-b423-5c91bc9894b9",
+            "892ecfe5-93cf-4f04-b489-b24fa081ba34"
+        ],
+        "store": [
+            "a7315615-58b9-4614-84aa-34e1446e9abc",
+            "e0ab35aa-27af-428b-b96f-e624352c74f1"
+        ],
+        "controller": [
+            "8dc48095-0a63-4d67-b0eb-233c5febc48f"
+        ],
+        "model": [
+            "593411e8-2afd-4bc2-81ed-798dc19e0055"
+        ],
+        "resource": [
+            "f681469a-dc9d-477e-9435-ca6c6b6b44b5",
+            "a67353ba-5b85-4371-9854-9080b7eafd31",
+            "c815c846-5a42-470f-8ca4-cd7316a12cd0"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

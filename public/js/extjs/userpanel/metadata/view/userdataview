@@ -1,0 +1,46 @@
+{
+    "type": "Ext.view.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "userdataview",
+        "designer|userClassName": "userdataview",
+        "emptyText": "Студентов по заданным параметрам не найдено",
+        "height": 425,
+        "itemSelector": "div.user-wrapper",
+        "store": "userstore",
+        "width": 575
+    },
+    "name": "MyView",
+    "designerId": "1938817c-95ca-44a1-820e-b2be4cdd10a1",
+    "viewControllerInstanceId": "7c8e0238-05af-4cd0-ab07-f4632c941d64",
+    "viewModelInstanceId": "cb61de70-bc3e-4924-85a7-ff693da8e60d",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<tpl for \".\">",
+                    "    <div class = \"user-wrapper\">",
+                    "        <span class=\"user_id\">{user_id}</span>",
+                    "        <span class=\"user_name\">{user_name}</span>",
+                    "        <span class=\"user_educ\">{user_educ}</span>",
+                    "        <span class=\"city_name\">{city_name}</span>",
+                    "    </div>",
+                    "</tpl>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "9e050661-2ed4-4bfc-949e-6cfbc3dabdc5"
+        }
+    ]
+}

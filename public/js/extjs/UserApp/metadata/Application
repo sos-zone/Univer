@@ -1,0 +1,29 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "UserController"
+        ],
+        "models": [
+            "UserModel"
+        ],
+        "name": "UserApp",
+        "stores": [
+            "UserStore",
+            "UserJsonStore"
+        ],
+        "views": [
+            "UserPanel",
+            "UserDataView",
+            "UserForm",
+            "UserFormWindow"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

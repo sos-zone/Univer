@@ -1,0 +1,186 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mygridpanel",
+        "designer|userClassName": "MyGridPanel",
+        "height": 300,
+        "store": "UserStore",
+        "title": "My Grid Panel",
+        "width": 500
+    },
+    "name": "MyGridPanel",
+    "designerId": "3626c86e-cb56-415f-a848-5a099e716c54",
+    "viewControllerInstanceId": "3d6cc22f-a5a2-40a8-b327-955114d14867",
+    "viewModelInstanceId": "1eb47535-2e1f-4061-91bb-c09a09fd5775",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTable",
+            "designerId": "622ec28c-e56e-47a0-9677-f6b375329022"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "user_id",
+                "text": "User Id",
+                "width": 75
+            },
+            "name": "MyColumn1",
+            "designerId": "42a20e17-1511-4e03-ad22-508ee4b6e76e"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "user_name",
+                "defaultWidth": null,
+                "text": "User Name",
+                "width": 200
+            },
+            "name": "MyColumn2",
+            "designerId": "ad27e708-c38e-4e9d-82c9-5aafdf557ba5",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTextField",
+                    "designerId": "e1229fed-81b8-4ada-8327-9b824bc1ece8"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "width": 400
+            },
+            "name": "MyToolbar1",
+            "designerId": "171852fa-f0de-4ca3-9890-42e726a521f5",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "load"
+                    },
+                    "name": "MyButton",
+                    "designerId": "13a04713-5bee-4c7d-ad18-1338cbea5bcb",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "var custStore = Ext.getStore('UserStore');",
+                                    "if (custStore != null) {",
+                                    "    custStore.load();",
+                                    "    var UserStore = Ext.getStore(\"UserStore\");",
+                                    "",
+                                    "    Ext.Msg.alert('Status', \"REST Loaded successfully, store: \" + UserStore);",
+                                    "    console.log(\"Load ok\"); //logs go where??",
+                                    "} else {",
+                                    "    Ext.Msg.show({",
+                                    "        title:'Load Failed',",
+                                    "        msg: 'Cannot find UserStore',",
+                                    "        buttons: Ext.Msg.YESNOCANCEL,",
+                                    "        fn: processResult,",
+                                    "        animEl: 'elId'",
+                                    "    });",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onButtonClick",
+                            "designerId": "db21189a-903a-4d03-8549-a7e24a75def2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "save"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "cc790118-d287-4790-99e0-071be2b9d963",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick1",
+                                "implHandler": [
+                                    "var custStore = Ext.getStore('UserStore');",
+                                    "custStore.sync();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onButtonClick1",
+                            "designerId": "2f701f4a-054d-4dc2-a655-7b1ea9a34300"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.plugin.RowEditing",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyRowEditingPlugin",
+            "designerId": "3c1d0ec8-74f1-4422-998e-5a928b0ac8c4"
+        }
+    ]
+}

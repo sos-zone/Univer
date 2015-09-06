@@ -1,0 +1,114 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "usercontroller"
+    },
+    "name": "MyController",
+    "designerId": "d7eab1c3-5b0c-41e8-8087-7cb6c742f256",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userdataview",
+                "selector": "userpanel userdataview"
+            },
+            "name": "userdataview",
+            "designerId": "8a86abcf-facf-435a-9973-6e9b04c01baf"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userformpanel",
+                "selector": "userformwindow userform"
+            },
+            "name": "userformpanel",
+            "designerId": "3f392dfc-5681-4d9f-b5b8-7c6089690076"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userformwindow",
+                "selector": "userformwindow"
+            },
+            "name": "userformwindow",
+            "designerId": "6d6b162c-5d52-4d79-bb4f-652dc2854e53"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userpanel button[action='sortbyid']",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onsortbuttonclick",
+                "implHandler": [
+                    "this.getuserdataview().getStore().sort('user_id','DESC');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onsortbuttonclick",
+            "designerId": "644c8ff0-d75d-4278-a263-451f36b259dd"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userpanel",
+                "selector": "userpanel"
+            },
+            "name": "userpanel",
+            "designerId": "fe565096-39fc-4279-8748-7e56721e2804"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userpanel userdataview",
+                "designer|targetType": "userdataview",
+                "fn": "onDataviewItemClick",
+                "implHandler": [
+                    "/*var win=this.getuserformwindow();*/",
+                    "var win=Ext.create('userpanel.view.userformwindow');",
+                    "win.show();",
+                    "this.getuserform().loadRecord(record);"
+                ],
+                "name": "itemclick",
+                "scope": "me"
+            },
+            "name": "onDataviewItemClick",
+            "designerId": "7af48d29-90ec-4ca9-80ca-a52dcaf5a602"
+        }
+    ]
+}

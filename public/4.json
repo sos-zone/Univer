@@ -1,0 +1,1 @@
+SELECT "user"."user_id" AS "user_id", "user"."user_name" AS "user_name", "city".*, "educations".* FROM "user" INNER JOIN "city" ON "user"."user_id"="city"."user_id" INNER JOIN "educations" ON "user"."user_id"="educations"."user_id"

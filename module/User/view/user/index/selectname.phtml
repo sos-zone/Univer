@@ -11,15 +11,15 @@ this is select page
 
 
 <?php
+
 foreach ($user as $user) {
     echo $user->user_id;
     echo $user->user_name;
+    echo $user->city_name;
+    echo $user->user_educ;
 
-
-    //echo $this->escapeHtml($user->user_id);
-    //echo $this->escapeHtml($user->user_name);
-    //echo $user['user_name'];
 }
+
 
 ?>
 

@@ -1,0 +1,44 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"user_id\": 806,",
+            "        \"user_name\": \"Jim Harris\",",
+            "        \"user_educ\": \"High\",",
+            "        \"city_name\": \"Moskow\"",
+            "    },",
+            "    {",
+            "        \"user_id\": 320,",
+            "        \"user_name\": \"Leon Wood\",",
+            "        \"user_educ\": \"Midle\",",
+            "        \"city_name\": \"Gorky\"",
+            "    },",
+            "    {",
+            "        \"user_id\": 348,",
+            "        \"user_name\": \"Rosa Edwards\",",
+            "        \"user_educ\": \"low\",",
+            "        \"city_name\": \"Vilnus\"",
+            "    },",
+            "    {",
+            "        \"user_id\": 261,",
+            "        \"user_name\": \"Anthony Murphy\",",
+            "        \"user_educ\": \"High\",",
+            "        \"city_name\": \"Minsk\"",
+            "    }",
+            "]"
+        ],
+        "designer|userAlias": "userstore",
+        "designer|userClassName": "userstore",
+        "model": "usermodel",
+        "storeId": "userstore"
+    },
+    "name": "MyStore",
+    "designerId": "ff45ef83-f42c-46bc-a8b8-04a3299637fa"
+}

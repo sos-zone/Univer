@@ -27,17 +27,26 @@ class UserTable
         $mySelect = $mySql
 
                 ->select()
-                ->columns(array('user_name'))
+                ->columns(array('user_id','user_name'))
                 ->from('user')
                 //->where(array('user_id' => '1'))
-                //->join('city','user.user_id=city.user_id',array('*'))
+                ->join('city','user.user_id=city.user_id',array('*'))
+                ->join('educations','user.user_id=educations.user_id',array('*'))
                 /////->joinUsing('city','user_id')
                 //->where(array('user.user_id=city.user_id'))
                 //->order('user.user_id DESC')
+                //->joinLeft('city', 'user.user_id=city.user_id',  array('*'))
                 ;
 
+//-----------------SQL запрос к базе данных (Для отладки)----------------------------------------
+        $query= $mySelect->getSqlString();
 
-        //$query= $select->getSqlString();
+        $file="public/4.json";
+        $fp = fopen($file, "w"); // ("r" - считывать "w" - создавать "a" - добовлять к тексту), мы создаем файл
+        fwrite($fp, $query);
+        fclose (fp);
+//-----------------------------------------------------------------------------------------------
+
 
         $myResultSet = $this->tableGateway->selectWith($mySelect);
         return $myResultSet; //$query;

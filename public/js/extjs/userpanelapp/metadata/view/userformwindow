@@ -1,0 +1,49 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[{",
+            "    text:'Сохранить',",
+            "    action:'saveuser'",
+            "}]"
+        ],
+        "closeAction": "hide",
+        "designer|userAlias": "userformwindow",
+        "designer|userClassName": "userformwindow",
+        "height": 350,
+        "title": "Редактирование...",
+        "width": 500
+    },
+    "name": "MyWindow",
+    "configAlternates": {
+        "buttons": "array"
+    },
+    "designerId": "6e457d70-03ad-4c6f-931d-77cbe2a26fca",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "bc85fd94-13d8-4884-addf-03b543a21ab4",
+    "viewModelInstanceId": "f5d97b8d-fa80-4ebf-b5c1-84d285d56b43",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "userform1",
+            "designerId": "eb46ab05-2d85-44c4-864c-b0026ed86272",
+            "masterInstanceId": "74dc581c-60ce-4880-a25d-3424f3715d73"
+        }
+    ]
+}

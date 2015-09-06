@@ -1,0 +1,46 @@
+{
+    "type": "Ext.view.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "userDataView",
+        "designer|userClassName": "UserDataView",
+        "emptyText": "Записей не найдено",
+        "height": 250,
+        "itemSelector": "div.user-wrapper",
+        "store": "UserStore",
+        "width": 400
+    },
+    "name": "MyView",
+    "designerId": "8312165e-f480-499b-b6ae-e53c9c8c8562",
+    "viewControllerInstanceId": "5b6244b3-6496-492f-baa5-cdae65801199",
+    "viewModelInstanceId": "d8936be4-b8a7-4d26-8613-1dec4f25ce39",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<tpl for \".\">",
+                    "    <div class = \"user-wrapper\">",
+                    "        <span class=\"user_id\">{user_id}</span>",
+                    "        <span class=\"user_name\">{user_name}</span>",
+                    "        <span class=\"user_educ\">{user_educ}</span>",
+                    "        <span class=\"city_name\">{city_name}</span>",
+                    "    </div>",
+                    "</tpl>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "4fff025a-61cf-45eb-9e4b-d4af091eaffd"
+        }
+    ]
+}

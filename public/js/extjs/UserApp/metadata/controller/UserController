@@ -1,0 +1,193 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UserController"
+    },
+    "name": "MyController",
+    "designerId": "8dc48095-0a63-4d67-b0eb-233c5febc48f",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userDataView",
+                "selector": "userPanel userDataView"
+            },
+            "name": "userDataView",
+            "designerId": "d1ccfbab-7b44-40e5-a7e6-798156a7682d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userFormPanel",
+                "selector": "userFormWindow userForm"
+            },
+            "name": "userFormPanel",
+            "designerId": "0184e53c-0189-4f04-b546-15a5551378bf"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userFormWindow",
+                "selector": "userFormWindow"
+            },
+            "name": "userFormWindow",
+            "designerId": "f19afb30-16cd-44a2-94cf-f2cb9159cc4a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userPanel userDataView",
+                "designer|targetType": "UserDataView",
+                "fn": "onDataviewItemClick",
+                "implHandler": [
+                    "var win=this.getUserFormWindow();",
+                    "if(!win)",
+                    "    {",
+                    "        win=Ext.create('UserApp.view.UserFormWindow');",
+                    "    }",
+                    "win.show();",
+                    "this.getUserFormPanel().loadRecord(record);"
+                ],
+                "name": "itemclick",
+                "scope": "me"
+            },
+            "name": "onDataviewItemClick",
+            "designerId": "efd0dd59-66b0-42fb-b6fe-a7fa62e06e36"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userPanel button[action='sortByID']",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onSortByIDButtonClick",
+                "implHandler": [
+                    "this.getUserDataView().getStore().sort('user_id','DESC');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onSortByIDButtonClick",
+            "designerId": "9ba7d074-842b-46ee-b323-eaa4dc6eb828"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userPanel button[action='clearFilter']",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onClearFilterButtonClick",
+                "implHandler": [
+                    "this.getUserDataView().getStore().clearFilter();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onClearFilterButtonClick",
+            "designerId": "ccf32e4c-61d1-4f75-b1b4-0217d71fd053"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userPanel combo[name='user_educ']",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "fn": "onEducComboboxChange",
+                "implHandler": [
+                    "this.getUserDataView().getStore().clearFilter();",
+                    "this.getUserDataView().getStore().filter('user_educ', newValue);"
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "name": "onEducComboboxChange",
+            "designerId": "8265d22a-797c-475e-b32e-a24fb5ea74c1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userPanel combo[name='city_name']",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "fn": "onCityComboboxChange",
+                "implHandler": [
+                    "this.getUserDataView().getStore().clearFilter();",
+                    "this.getUserDataView().getStore().filter('city_name', newValue);"
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "name": "onCityComboboxChange",
+            "designerId": "b9461f96-bb18-401d-a0b1-f94fe8705050"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userPanel button[action='addUser']",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onAddUserButtonClick",
+                "implHandler": [
+                    "var win = this.getUserFormWindow();",
+                    "if(!win)",
+                    "    {",
+                    "        win=Ext.create('UserApp.view.UserFormWindow');",
+                    "        ",
+                    "    }",
+                    "this.getUserFormPanel().loadRecord(Ext.create('UserApp.model.UserModel'));",
+                    "this.adding=true;",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onAddUserButtonClick",
+            "designerId": "634c4cc2-f011-4507-b61f-2d4c1264f8ae"
+        }
+    ]
+}

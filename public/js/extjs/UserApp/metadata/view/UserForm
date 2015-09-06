@@ -1,0 +1,96 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userAlias": "userForm",
+        "designer|userClassName": "UserForm",
+        "height": 250,
+        "title": "My Form",
+        "width": 400
+    },
+    "name": "MyForm",
+    "designerId": "2b32bc0c-dc70-400d-9b80-c75623cb03b7",
+    "viewControllerInstanceId": "ea310d65-f8ba-4c1d-96db-bdd7b99a997a",
+    "viewModelInstanceId": "4782c92e-2470-44f6-a2b4-bc2f34f24922",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "user_id",
+                "layout|anchor": "100%",
+                "name": "user_id"
+            },
+            "name": "MyTextField",
+            "designerId": "58d79f25-86e1-4364-816c-15745f63f882"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "user_name",
+                "layout|anchor": "100%",
+                "name": "user_name"
+            },
+            "name": "MyTextField1",
+            "designerId": "d01618fa-d429-4180-9d9e-d8ba199e3f12"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "user_educ",
+                "layout|anchor": "100%",
+                "name": "user_educ",
+                "queryMode": "local",
+                "store": [
+                    "['Высшее','Среднеспециальное','Среднее']"
+                ]
+            },
+            "name": "MyComboBox2",
+            "configAlternates": {
+                "store": "array"
+            },
+            "designerId": "fcadf14e-8fe3-4949-a4da-28c4e28c2173"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "city_name",
+                "layout|anchor": "100%",
+                "name": "city_name",
+                "queryMode": "local",
+                "store": [
+                    "['Минск','Витебск','Гродно','Брест']"
+                ]
+            },
+            "name": "MyComboBox3",
+            "configAlternates": {
+                "store": "array"
+            },
+            "designerId": "a842d6f2-03ff-4632-adf9-05452cbf5bbc"
+        }
+    ]
+}

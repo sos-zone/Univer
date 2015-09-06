@@ -1,0 +1,162 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "userpanel",
+        "designer|userClassName": "userpanel",
+        "height": 500,
+        "title": "Студенты",
+        "width": 720
+    },
+    "name": "MyPanel",
+    "designerId": "76a4f79f-3e20-46da-acbc-0d1dc8136a5d",
+    "viewControllerInstanceId": "25398944-c798-4183-8476-31e86d56027e",
+    "viewModelInstanceId": "1a9b1108-505d-4f58-aaca-d24a06a30baf",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "name": "MyToolbar",
+            "designerId": "156cec9d-13cc-4e06-a1c7-02d69f1c6103",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "user_city",
+                        "labelWidth": 75,
+                        "layout|flex": null,
+                        "name": "city_name",
+                        "queryMode": "local",
+                        "store": [
+                            "['Минск','Москва','Вильнюс','Горки','Владивосток']"
+                        ],
+                        "width": 200
+                    },
+                    "name": "MyComboBox",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "3149256d-d88e-45ef-9d3b-58e6cf938ac6"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "user_educ",
+                        "labelWidth": 75,
+                        "layout|flex": null,
+                        "name": "user_educ",
+                        "queryMode": "local",
+                        "store": [
+                            "['Высшее','Среднее','Среднеспециальное']"
+                        ],
+                        "width": 200
+                    },
+                    "name": "MyComboBox1",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "77a60fa2-4828-4dae-bbe9-6d56abfc6d4a"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "sortbyid",
+                        "layout|flex": null,
+                        "text": "sortbyid"
+                    },
+                    "name": "MyButton",
+                    "designerId": "0e3641da-77da-42fe-83c5-b098bb80d22a",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "clearfilter",
+                        "layout|flex": null,
+                        "text": "ClearFilter"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "afe80510-e6b1-4ab8-987f-48cdcf1afd24",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "adduser",
+                        "layout|flex": null,
+                        "text": "Add User"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "011e9422-088b-4b5e-bc9f-80671be43f78",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "userdataview1",
+            "designerId": "dda08046-b71d-4944-9044-1eb926afd9e7",
+            "masterInstanceId": "1938817c-95ca-44a1-820e-b2be4cdd10a1"
+        }
+    ]
+}

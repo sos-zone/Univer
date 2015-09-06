@@ -1,0 +1,48 @@
+div.user-wrapper
+{
+float:left;
+width:150px;
+height:100px;
+background-color:#eee;
+margin:20px;
+border:2px solid #eee;
+}
+
+div.user-wrapper.x-item-selected
+{
+border:2px solid #000;
+}
+
+div.user-wrapper span.user_id
+{
+font-size:1.2em;
+font-weight:bold;
+text-align:center;
+display:block;
+}
+
+div.user-wrapper span.user_name
+{
+font-size:1.2em;
+font-weight:bold;
+text-align:center;
+display:block;
+}
+
+div.user-wrapper span.user_educ
+{
+padding:5px;
+display:block;
+text-align:center;
+}
+
+div.user-wrapper span.city_name
+{
+display:block;
+width:60%;
+margin:10px 20%;
+padding:3px;
+text-align:center;
+color:white;
+font-weight:bold;
+}

@@ -1,0 +1,38 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"user_id\": 424,",
+            "        \"user_name\": \"Stella Walker\",",
+            "        \"user_educ\": \"Officia Repellat Inventore Nulla\",",
+            "        \"city_name\": \"Omnis\"",
+            "    },",
+            "    {",
+            "        \"user_id\": 751,",
+            "        \"user_name\": \"Katherine Lopez\",",
+            "        \"user_educ\": \"Ducimus Laboriosam Deserunt Ab\",",
+            "        \"city_name\": \"Voluptas\"",
+            "    },",
+            "    {",
+            "        \"user_id\": 293,",
+            "        \"user_name\": \"Leon Allen\",",
+            "        \"user_educ\": \"Ad Quod Consectetur\",",
+            "        \"city_name\": \"Molestias\"",
+            "    }",
+            "]"
+        ],
+        "designer|userAlias": "userStore",
+        "designer|userClassName": "UserStore",
+        "model": "UserModel",
+        "storeId": "UserStore"
+    },
+    "name": "MyStore",
+    "designerId": "a7315615-58b9-4614-84aa-34e1446e9abc"
+}

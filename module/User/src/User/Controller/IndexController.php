@@ -83,22 +83,18 @@ class IndexController extends AbstractActionController
         $jsonfile = "[";
         foreach ($user_data['user'] as $user)
         {
-            $jsonfile = $jsonfile.'{"user_id": "'.$user->user_id.'","user_name":"'.$user->user_name.'"},';
+            $jsonfile = $jsonfile.'{"user_id": "'.$user->user_id.'",
+                                    "user_name":"'.$user->user_name.'",
+                                    "user_educ":"'.$user->user_educ.'",
+                                    "city_name":"'.$user->city_name.'"},';
         }
         $jsonfile = substr($jsonfile, 0, -1); //удалаем последний символ(запятую)
         $jsonfile = $jsonfile.']';
 
+
         $jsonfile = json_decode($jsonfile);
 //------------------------------------------------
 
-//------Запись в файл-----------------------------
-        /*
-        $file="public/4.json";
-        $fp = fopen($file, "w"); // ("r" - считывать "w" - создавать "a" - добовлять к тексту), мы создаем файл
-        fwrite($fp, $jsonfile);
-        fclose (fp);
-        */
-//------------------------------------------------
 
         $result = new JsonModel($jsonfile);
         //$view->setTemplate('user/index/data');    //установка шаблона
