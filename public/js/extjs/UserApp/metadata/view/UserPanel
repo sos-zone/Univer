@@ -9,9 +9,9 @@
         "designer|initialView": true,
         "designer|userAlias": "userPanel",
         "designer|userClassName": "UserPanel",
-        "height": 500,
+        "height": 600,
         "title": "UserApp",
-        "width": 700
+        "width": 800
     },
     "name": "MyPanel",
     "designerId": "24d54036-e8cd-472f-b986-684cf142db50",
@@ -26,7 +26,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dock": "top"
+                "dock": "top",
+                "height": null
             },
             "name": "MyToolbar",
             "designerId": "c6564b68-c3d5-4759-94ee-42a18283f10a",
@@ -39,13 +40,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "user_educ",
-                        "labelWidth": 75,
+                        "fieldLabel": "Education:",
+                        "labelWidth": 60,
                         "layout|flex": null,
                         "name": "user_educ",
                         "queryMode": "local",
                         "store": [
-                            "['Высшее','Среднеспециальное','Среднее']"
+                            "['Higher education','Secondary special education','Secondary education','Basic education']"
                         ],
                         "width": 200
                     },
@@ -63,15 +64,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "city_name",
-                        "labelWidth": 75,
+                        "fieldLabel": "City:",
+                        "labelWidth": 25,
                         "layout|flex": null,
                         "name": "city_name",
                         "queryMode": "local",
                         "store": [
-                            "['Минск','Витебск','Гродно','Брест']"
+                            "['Minsk','Brest','Grodno','Mogilev','Vitebsk','Gomel']"
                         ],
-                        "width": 200
+                        "width": 175
                     },
                     "name": "MyComboBox1",
                     "configAlternates": {

@@ -7,21 +7,24 @@
 </head>
 
 <body>
-this is select page
+<h2>All Users at DataBase</h2>
+<table class="table">
+    <tr>
+        <th>ID User</th>
+        <th>User Name</th>
+        <th>User Education</th>
+        <th>City</th>
+    </tr>
+    <?php foreach ($user as $user) : ?>
+        <tr>
+            <td><?php echo $this->escapeHtml($user->user_id);?></td>
+            <td><?php echo $this->escapeHtml($user->user_name);?></td>
+            <td><?php echo $this->escapeHtml($user->user_educ);?></td>
+            <td><?php echo $this->escapeHtml($user->city_name);?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
 
-
-<?php
-
-foreach ($user as $user) {
-    echo $user->user_id;
-    echo $user->user_name;
-    echo $user->city_name;
-    echo $user->user_educ;
-
-}
-
-
-?>
 
 </body>
 </html>

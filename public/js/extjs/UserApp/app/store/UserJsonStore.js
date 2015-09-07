@@ -27,10 +27,12 @@ Ext.define('UserApp.store.UserJsonStore', {
         cfg = cfg || {};
         me.callParent([Ext.apply({
             storeId: 'UserJsonStore',
+            autoLoad: true,
+            autoSync: true,
             model: 'UserApp.model.UserModel',
             proxy: {
                 type: 'ajax',
-                url: 'http://univer/user/index/data',
+                url: 'http://univer/user/index/data.json',
                 reader: {
                     type: 'json'
                 }

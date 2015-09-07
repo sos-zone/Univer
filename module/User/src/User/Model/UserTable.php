@@ -71,8 +71,26 @@ class UserTable
         );
 
         $user_id = (int)$user->user_id;
-        if ($user_id == 0) {
+
+
+        //-----------------------------------------
+        $file="public/5.json";
+        $fp = fopen($file, "w"); // ("r" - считывать "w" - создавать "a" - добовлять к тексту), мы создаем файл
+        fwrite($fp, $user->user_id);
+        fclose (fp);
+        //-----------------------------------------
+
+
+        if ($user_id == 0)
+        {
             $this->tableGateway->insert($data);
+            /*
+            $insquery = 'INSERT INTO city (user_id,city_name) VALUES(5, "Minsk")';
+            $Adapter = $this->getServiceLocator()->get('Zend\Db\Adapter\Adapter'); //Или получить адаптер любым другим способом
+            $Adapter->query($insquery, $Adapter::QUERY_MODE_EXECUTE);
+            */
+
+
         } else {
             if ($this->getUser($user_id)) {
                 $this->tableGateway->update($data, array('user_id' => $user_id));

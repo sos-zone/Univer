@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>main page</title>
+
+
+</head>
+
+<body>
+
+
+<script>
+    var Ext = Ext || {};
+    Ext.theme = {
+        name: ""
+    };
+</script>
+<script src="http://cdn.sencha.com/ext/gpl/5.1.0/build/ext-all.js"></script>
+<script src="http://cdn.sencha.com/ext/gpl/5.1.0/build/packages/ext-theme-crisp/build/ext-theme-crisp.js"></script>
+<link rel="stylesheet" href="http://cdn.sencha.com/ext/gpl/5.1.0/build/packages/ext-theme-crisp/build/resources/ext-theme-crisp-all.css">
+<script type="text/javascript" src="js/extjs/UserApp/app.js"></script>
+
+
+<h1>Welcome2</h1>
+<a href="/user/index/selectname">Select page</a>
+<p>
+    <a href="<?php echo $this->url('user', array('action'=>'add'));?>">Add new user</a>
+</p>
+<pre>
+<?php
+if(isset($_POST))// && !empty($_POST['data']))
+{
+print_r($_POST);
+}
+echo $_GET['id'];
+?>
+</pre>
+
+
+<table class="table">
+    <tr>
+        <th>user_id</th>
+        <th>user_name</th>
+        <th>&nbsp;</th>
+    </tr>
+    <?php foreach ($user as $user) : ?>
+        <tr>
+            <td><?php echo $this->escapeHtml($user->user_id);?></td>
+            <td><?php echo $this->escapeHtml($user->user_name);?></td>
+            <td>
+                <a href="<?php echo $this->url('user',
+                    array('action'=>'edit', 'user_id' => $user->user_id));?>">Edit</a>
+                <a href="<?php echo $this->url('user',
+                    array('action'=>'delete', 'user_id' => $user->user_id));?>">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
+</body>
+</html>

@@ -9,10 +9,10 @@
         "designer|userAlias": "userDataView",
         "designer|userClassName": "UserDataView",
         "emptyText": "Записей не найдено",
-        "height": 250,
+        "height": 350,
         "itemSelector": "div.user-wrapper",
-        "store": "UserStore",
-        "width": 400
+        "store": "UserJsonStore",
+        "width": 780
     },
     "name": "MyView",
     "designerId": "8312165e-f480-499b-b6ae-e53c9c8c8562",

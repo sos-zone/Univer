@@ -7,26 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "data": [
-            "[",
-            "    {",
-            "        \"user_id\": 424,",
-            "        \"user_name\": \"Stella Walker\",",
-            "        \"user_educ\": \"Officia Repellat Inventore Nulla\",",
-            "        \"city_name\": \"Omnis\"",
-            "    },",
-            "    {",
-            "        \"user_id\": 751,",
-            "        \"user_name\": \"Katherine Lopez\",",
-            "        \"user_educ\": \"Ducimus Laboriosam Deserunt Ab\",",
-            "        \"city_name\": \"Voluptas\"",
-            "    },",
-            "    {",
-            "        \"user_id\": 293,",
-            "        \"user_name\": \"Leon Allen\",",
-            "        \"user_educ\": \"Ad Quod Consectetur\",",
-            "        \"city_name\": \"Molestias\"",
-            "    }",
-            "]"
+            "[{\"user_id\":\"1\",\"user_name\":\"Suleiman ibn Hottab\",\"user_educ\":\" higher education\",\"city_name\":\"Brest\"},{\"user_id\":\"2\",\"user_name\":\"Viktor Petrovich\",\"user_educ\":\"secondary education\",\"city_name\":\"Mogilev\"},{\"user_id\":\"3\",\"user_name\":\"Olga Pavlovna\",\"user_educ\":\"basic education\",\"city_name\":\"Minsk\"},{\"user_id\":\"4\",\"user_name\":\"Raisa Petrovna\",\"user_educ\":\"secondary special education\",\"city_name\":\"Grodno\"}]"
         ],
         "designer|userAlias": "userStore",
         "designer|userClassName": "UserStore",

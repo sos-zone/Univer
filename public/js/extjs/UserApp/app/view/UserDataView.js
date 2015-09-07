@@ -25,8 +25,8 @@ Ext.define('UserApp.view.UserDataView', {
     viewModel: {
         type: 'userdataview'
     },
-    height: 250,
-    width: 400,
+    height: 350,
+    width: 780,
     emptyText: 'Записей не найдено',
     itemSelector: 'div.user-wrapper',
     itemTpl: [
@@ -39,6 +39,6 @@ Ext.define('UserApp.view.UserDataView', {
         '    </div>',
         '</tpl>'
     ],
-    store: 'UserStore'
+    store: 'UserJsonStore'
 
 });

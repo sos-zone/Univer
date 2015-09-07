@@ -29,8 +29,8 @@ Ext.define('UserApp.view.UserPanel', {
     viewModel: {
         type: 'userpanel'
     },
-    height: 500,
-    width: 700,
+    height: 600,
+    width: 800,
     title: 'UserApp',
 
     dockedItems: [
@@ -41,28 +41,31 @@ Ext.define('UserApp.view.UserPanel', {
                 {
                     xtype: 'combobox',
                     width: 200,
-                    fieldLabel: 'user_educ',
-                    labelWidth: 75,
+                    fieldLabel: 'Education:',
+                    labelWidth: 60,
                     name: 'user_educ',
                     queryMode: 'local',
                     store: [
-                        'Высшее',
-                        'Среднеспециальное',
-                        'Среднее'
+                        'Higher education',
+                        'Secondary special education',
+                        'Secondary education',
+                        'Basic education'
                     ]
                 },
                 {
                     xtype: 'combobox',
-                    width: 200,
-                    fieldLabel: 'city_name',
-                    labelWidth: 75,
+                    width: 175,
+                    fieldLabel: 'City:',
+                    labelWidth: 25,
                     name: 'city_name',
                     queryMode: 'local',
                     store: [
-                        'Минск',
-                        'Витебск',
-                        'Гродно',
-                        'Брест'
+                        'Minsk',
+                        'Brest',
+                        'Grodno',
+                        'Mogilev',
+                        'Vitebsk',
+                        'Gomel'
                     ]
                 },
                 {

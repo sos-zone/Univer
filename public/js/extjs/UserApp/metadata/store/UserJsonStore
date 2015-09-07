@@ -6,6 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
         "designer|userClassName": "UserJsonStore",
         "model": "UserModel",
         "storeId": "UserJsonStore"
@@ -21,7 +23,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://univer/user/index/data"
+                "url": "http://univer/user/index/data.json"
             },
             "name": "MyAjaxProxy",
             "designerId": "66dc8815-5d7b-47b7-aa7a-15f3ebf419c0",

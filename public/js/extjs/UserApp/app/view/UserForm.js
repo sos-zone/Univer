@@ -50,9 +50,10 @@ Ext.define('UserApp.view.UserForm', {
             name: 'user_educ',
             queryMode: 'local',
             store: [
-                'Высшее',
-                'Среднеспециальное',
-                'Среднее'
+                'Higher education',
+                'Secondary special education',
+                'Secondary education',
+                'Basic education'
             ]
         },
         {
@@ -62,10 +63,11 @@ Ext.define('UserApp.view.UserForm', {
             name: 'city_name',
             queryMode: 'local',
             store: [
-                'Минск',
-                'Витебск',
-                'Гродно',
-                'Брест'
+                'Minsk',
+                'Brest',
+                'Grodno',
+                'Vitebsk',
+                'Mogilev'
             ]
         }
     ]

@@ -41,16 +41,20 @@ class IndexController extends AbstractActionController
 
     public function dataAction()
     {
+
         if(isset($_GET['act']))
         {
 
-            $action = $_GET["act"];
+            $action = $_GET['act'];
 
             switch($action)
             {
                 case "update":
+                    header('Location:http://tut.by/');
+                    exit;
 
-                    break;
+
+                break;
 
             }
 
@@ -68,8 +72,10 @@ class IndexController extends AbstractActionController
         {
             //Сохраняем его в базу данных
             $user = new User();
-            $user->user_id = $newusername->user_id; //0;
+            $user->user_id = $newusername->user_id;
             $user->user_name = $newusername->user_name;
+            $user->user_educ = $newusername->user_educ;
+            $user->city_name = $newusername->city_name;
             $this->getUserTable()->saveUser($user);
 
         }
@@ -112,6 +118,17 @@ class IndexController extends AbstractActionController
             $this->userTable = $sm->get('User\Model\UserTable');
         }
         return $this->userTable;
+    }
+
+    public function infoAction()
+    {
+        //$this->layout('layout/index');    //use own page template
+
+
+        $view= new ViewModel();
+        $view->setTemplate('user/index/info');
+        return $view;
+
     }
 
 }

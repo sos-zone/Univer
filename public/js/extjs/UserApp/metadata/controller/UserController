@@ -188,6 +188,79 @@
             },
             "name": "onAddUserButtonClick",
             "designerId": "634c4cc2-f011-4507-b61f-2d4c1264f8ae"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userFormWindow button[action='saveUser']",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onSaveButtonClick",
+                "implHandler": [
+                    "var form=this.getUserFormPanel();",
+                    "var selectedRecord=form.getRecord();",
+                    "if(this.adding)",
+                    "    {",
+                    "        this.adding=undefined;",
+                    "        this.getUserDataView().getStore().add(selectedRecord);",
+                    "",
+                    "    }",
+                    "selectedRecord.set(form.getValues());",
+                    "this.getUserDataView().getStore().filter();",
+                    "this.getUserFormWindow().close();",
+                    "",
+                    "/*",
+                    "var ProjStore = this.getUserDataView().getStore();",
+                    "var project = ProjStore.findRecord('user_id', user_id);",
+                    "return project.get('user_id');",
+                    "window.location.href = \"http://univer/user?id=\"+selectedRecord['user_id'];",
+                    "*/",
+                    "var UsStore = Ext.getStore('UserJsonStore');",
+                    "UsStore.sync();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onSaveButtonClick",
+            "designerId": "17560659-5f01-4275-9d7f-3c062559f3d7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userPanel userDataView",
+                "designer|targetType": "UserDataView",
+                "fn": "onDataviewItemContextMenu",
+                "implHandler": [
+                    "e.stopEvent();",
+                    "if(!this.ctxMenu)",
+                    "    {",
+                    "        this.ctxMenu = Ext.create('Ext.menu.Menu',{",
+                    "            items:[{text:'Delete User'}],",
+                    "            defaults:{listeners:{click:function(item){",
+                    "                this.getUserDataView().getStore().remove([record]);",
+                    "                this.getUserDataView().getStore().filter();",
+                    "            },",
+                    "                                 scope: this",
+                    "                                }}",
+                    "        });",
+                    "        ",
+                    "    }",
+                    "this.ctxMenu.showAt(e.getXY());"
+                ],
+                "name": "itemcontextmenu",
+                "scope": "me"
+            },
+            "name": "onDataviewItemContextMenu",
+            "designerId": "86ced355-5dc2-437a-b055-8ae0c3a43863"
         }
     ]
 }

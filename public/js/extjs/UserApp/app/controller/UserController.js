@@ -24,7 +24,8 @@ Ext.define('UserApp.controller.UserController', {
 
     control: {
         "userPanel userDataView": {
-            itemclick: 'onDataviewItemClick'
+            itemclick: 'onDataviewItemClick',
+            itemcontextmenu: 'onDataviewItemContextMenu'
         },
         "userPanel button[action='sortByID']": {
             click: 'onSortByIDButtonClick'
@@ -40,6 +41,9 @@ Ext.define('UserApp.controller.UserController', {
         },
         "userPanel button[action='addUser']": {
             click: 'onAddUserButtonClick'
+        },
+        "userFormWindow button[action='saveUser']": {
+            click: 'onSaveButtonClick'
         }
     },
 
@@ -81,6 +85,47 @@ Ext.define('UserApp.controller.UserController', {
         this.getUserFormPanel().loadRecord(Ext.create('UserApp.model.UserModel'));
         this.adding=true;
         win.show();
+    },
+
+    onSaveButtonClick: function(button, e, eOpts) {
+        var form=this.getUserFormPanel();
+        var selectedRecord=form.getRecord();
+        if(this.adding)
+            {
+                this.adding=undefined;
+                this.getUserDataView().getStore().add(selectedRecord);
+
+            }
+        selectedRecord.set(form.getValues());
+        this.getUserDataView().getStore().filter();
+        this.getUserFormWindow().close();
+
+        /*
+        var ProjStore = this.getUserDataView().getStore();
+        var project = ProjStore.findRecord('user_id', user_id);
+        return project.get('user_id');
+        window.location.href = "http://univer/user?id="+selectedRecord['user_id'];
+        */
+        var UsStore = Ext.getStore('UserJsonStore');
+        UsStore.sync();
+    },
+
+    onDataviewItemContextMenu: function(dataview, record, item, index, e, eOpts) {
+        e.stopEvent();
+        if(!this.ctxMenu)
+            {
+                this.ctxMenu = Ext.create('Ext.menu.Menu',{
+                    items:[{text:'Delete User'}],
+                    defaults:{listeners:{click:function(item){
+                        this.getUserDataView().getStore().remove([record]);
+                        this.getUserDataView().getStore().filter();
+                    },
+                                         scope: this
+                                        }}
+                });
+
+            }
+        this.ctxMenu.showAt(e.getXY());
     }
 
 });
