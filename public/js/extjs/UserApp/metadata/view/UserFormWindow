@@ -7,10 +7,16 @@
     "codeClass": null,
     "userConfig": {
         "buttons": [
-            "[{",
+            "[",
+            "{",
+            "text:'Удалить',",
+            "action:'deleteUser'",
+            "},",
+            "{",
             "text:'Сохранить',",
             "action:'saveUser'",
-            "}]"
+            "}",
+            "]"
         ],
         "closeAction": "hide",
         "designer|userAlias": "userFormWindow",

@@ -24,8 +24,7 @@ Ext.define('UserApp.controller.UserController', {
 
     control: {
         "userPanel userDataView": {
-            itemclick: 'onDataviewItemClick',
-            itemcontextmenu: 'onDataviewItemContextMenu'
+            itemclick: 'onDataviewItemClick'
         },
         "userPanel button[action='sortByID']": {
             click: 'onSortByIDButtonClick'
@@ -44,6 +43,9 @@ Ext.define('UserApp.controller.UserController', {
         },
         "userFormWindow button[action='saveUser']": {
             click: 'onSaveButtonClick'
+        },
+        "userFormWindow button[action='deleteUser']": {
+            click: 'onDeleteButtonClick'
         }
     },
 
@@ -82,12 +84,16 @@ Ext.define('UserApp.controller.UserController', {
                 win=Ext.create('UserApp.view.UserFormWindow');
 
             }
-        this.getUserFormPanel().loadRecord(Ext.create('UserApp.model.UserModel'));
-        this.adding=true;
+        /*add properti ID=user_id*/
+        /*Ext.getCmp('user_id').setValue("0");*/
+
+        /*this.getUserFormPanel().loadRecord(Ext.create('UserApp.model.UserModel'));
+        this.adding=true;*/
         win.show();
     },
 
     onSaveButtonClick: function(button, e, eOpts) {
+        /*
         var form=this.getUserFormPanel();
         var selectedRecord=form.getRecord();
         if(this.adding)
@@ -99,6 +105,21 @@ Ext.define('UserApp.controller.UserController', {
         selectedRecord.set(form.getValues());
         this.getUserDataView().getStore().filter();
         this.getUserFormWindow().close();
+        */
+
+        var form=this.getUserFormPanel();
+        var selectedRecord=form.getRecord();
+        if(this.adding)
+        {
+            this.adding=undefined;
+            this.getUserDataView().getStore().add(selectedRecord);
+
+        }
+        selectedRecord.set(form.getValues());
+        window.location.href = "http://univer/user/index/data?act=update&"+form.getValues('user_id');
+
+        this.getUserDataView().getStore().filter();
+        this.getUserFormWindow().close();
 
         /*
         var ProjStore = this.getUserDataView().getStore();
@@ -106,26 +127,27 @@ Ext.define('UserApp.controller.UserController', {
         return project.get('user_id');
         window.location.href = "http://univer/user?id="+selectedRecord['user_id'];
         */
+        /*
+        record.get('name');
         var UsStore = Ext.getStore('UserJsonStore');
         UsStore.sync();
+        */
     },
 
-    onDataviewItemContextMenu: function(dataview, record, item, index, e, eOpts) {
-        e.stopEvent();
-        if(!this.ctxMenu)
-            {
-                this.ctxMenu = Ext.create('Ext.menu.Menu',{
-                    items:[{text:'Delete User'}],
-                    defaults:{listeners:{click:function(item){
-                        this.getUserDataView().getStore().remove([record]);
-                        this.getUserDataView().getStore().filter();
-                    },
-                                         scope: this
-                                        }}
-                });
+    onDeleteButtonClick: function(button, e, eOpts) {
+        var form=this.getUserFormPanel();
+        var selectedRecord=form.getRecord();
+        if(this.adding)
+        {
+            this.adding=undefined;
+            this.getUserDataView().getStore().add(selectedRecord);
 
-            }
-        this.ctxMenu.showAt(e.getXY());
+        }
+        selectedRecord.set(form.getValues());
+        window.location.href = "http://univer/user/index/data?act=delete&"+form.getValues('user_id');
+
+        this.getUserDataView().getStore().filter();
+        this.getUserFormWindow().close();
     }
 
 });

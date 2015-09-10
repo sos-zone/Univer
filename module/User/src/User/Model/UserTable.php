@@ -38,7 +38,7 @@ class UserTable
                 //->joinLeft('city', 'user.user_id=city.user_id',  array('*'))
                 ;
 
-//-----------------SQL запрос к базе данных (Для отладки)----------------------------------------
+//-----------------Сохраняем SQL запрос к базе данных (Для отладки)----------------------------------------
         $query= $mySelect->getSqlString();
 
         $file="public/4.json";
@@ -49,7 +49,7 @@ class UserTable
 
 
         $myResultSet = $this->tableGateway->selectWith($mySelect);
-        return $myResultSet; //$query;
+        return $myResultSet;
 
     }
 
@@ -63,6 +63,23 @@ class UserTable
         }
         return $row;
     }
+/*
+    public function getUserByName($user_name)
+    {
+
+        $mySql = new Sql($this->tableGateway->getAdapter());
+        $mySelect = $mySql
+            ->select()
+            ->columns(array('user_id','user_name'))
+            ->from('user')
+            ->where(array('user_name' => $user_name))
+        ;
+
+        $myResultSet = $this->tableGateway->selectWith($mySelect);
+        return $myResultSet;
+    }
+*/
+
 
     public function saveUser(User $user)
     {
@@ -75,7 +92,7 @@ class UserTable
 
         //-----------------------------------------
         $file="public/5.json";
-        $fp = fopen($file, "w"); // ("r" - считывать "w" - создавать "a" - добовлять к тексту), мы создаем файл
+        $fp = fopen($file, "w"); // ("r" - считывать "w" - создавать "a" - добовлять к тексту)
         fwrite($fp, $user->user_id);
         fclose (fp);
         //-----------------------------------------
@@ -83,18 +100,26 @@ class UserTable
 
         if ($user_id == 0)
         {
-            $this->tableGateway->insert($data);
+            $this->tableGateway->insert($data); //вставили в таблицу "user"
+
+            //$user_id = $this->tableGateway->lastInsertValue;
+            $user_id = $this->tableGateway->getLastInsertValue();//Возвращаем ID вставленного User'a
+            return $user_id;
+
             /*
             $insquery = 'INSERT INTO city (user_id,city_name) VALUES(5, "Minsk")';
             $Adapter = $this->getServiceLocator()->get('Zend\Db\Adapter\Adapter'); //Или получить адаптер любым другим способом
             $Adapter->query($insquery, $Adapter::QUERY_MODE_EXECUTE);
             */
-
-
-        } else {
-            if ($this->getUser($user_id)) {
+        }
+        else
+        {
+            if ($this->getUser($user_id))
+            {
                 $this->tableGateway->update($data, array('user_id' => $user_id));
-            } else {
+            }
+            else
+            {
                 throw new \Exception('User id does not exist');
             }
         }

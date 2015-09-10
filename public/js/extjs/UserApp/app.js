@@ -39,6 +39,7 @@ Ext.application({
     name: 'UserApp',
     appFolder: '/js/extjs/UserApp/app',
 
+
     launch: function() {
         Ext.create('UserApp.view.UserPanel', {renderTo: Ext.getBody()});
     }

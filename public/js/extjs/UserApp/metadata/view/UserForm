@@ -27,6 +27,7 @@
             "codeClass": null,
             "userConfig": {
                 "fieldLabel": "user_id",
+                "id": "user_id",
                 "layout|anchor": "100%",
                 "name": "user_id"
             },

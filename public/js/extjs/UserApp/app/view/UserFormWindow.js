@@ -26,6 +26,10 @@ Ext.define('UserApp.view.UserFormWindow', {
     config: {
         buttons: [
             {
+                text: 'Удалить',
+                action: 'deleteUser'
+            },
+            {
                 text: 'Сохранить',
                 action: 'saveUser'
             }

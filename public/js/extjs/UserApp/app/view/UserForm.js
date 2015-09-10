@@ -34,6 +34,7 @@ Ext.define('UserApp.view.UserForm', {
         {
             xtype: 'textfield',
             anchor: '100%',
+            id: 'user_id',
             fieldLabel: 'user_id',
             name: 'user_id'
         },

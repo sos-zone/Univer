@@ -32,6 +32,7 @@ Ext.define('UserApp.store.UserJsonStore', {
             model: 'UserApp.model.UserModel',
             proxy: {
                 type: 'ajax',
+                api: 'read: \'http://univer/user/index/data.json\',update: \'http://univer/user/index/data?act=update\'',
                 url: 'http://univer/user/index/data.json',
                 reader: {
                     type: 'json'

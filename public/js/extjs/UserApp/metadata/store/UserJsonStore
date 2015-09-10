@@ -23,6 +23,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "api": [
+                    "read: 'http://univer/user/index/data.json',update: 'http://univer/user/index/data?act=update'"
+                ],
                 "url": "http://univer/user/index/data.json"
             },
             "name": "MyAjaxProxy",
