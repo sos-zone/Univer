@@ -30,6 +30,10 @@ Ext.define('UserApp.view.UserFormWindow', {
                 action: 'deleteUser'
             },
             {
+                text: 'Отмена',
+                action: 'cancelUser'
+            },
+            {
                 text: 'Сохранить',
                 action: 'saveUser'
             }

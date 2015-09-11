@@ -36,19 +36,22 @@ Ext.define('UserApp.view.UserForm', {
             anchor: '100%',
             id: 'user_id',
             fieldLabel: 'user_id',
-            name: 'user_id'
+            name: 'user_id',
+            emptyText: 'Если новый пользователь -> id=0'
         },
         {
             xtype: 'textfield',
             anchor: '100%',
             fieldLabel: 'user_name',
-            name: 'user_name'
+            name: 'user_name',
+            emptyText: 'Имя нового пользователя'
         },
         {
             xtype: 'combobox',
             anchor: '100%',
             fieldLabel: 'user_educ',
             name: 'user_educ',
+            emptyText: 'Образование нового пользователя',
             queryMode: 'local',
             store: [
                 'Higher education',
@@ -62,6 +65,7 @@ Ext.define('UserApp.view.UserForm', {
             anchor: '100%',
             fieldLabel: 'city_name',
             name: 'city_name',
+            emptyText: 'Город нового пользователя',
             queryMode: 'local',
             store: [
                 'Minsk',

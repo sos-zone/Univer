@@ -179,11 +179,8 @@
                     "        win=Ext.create('UserApp.view.UserFormWindow');",
                     "",
                     "    }",
-                    "/*add properti ID=user_id*/",
-                    "/*Ext.getCmp('user_id').setValue(\"0\");*/",
-                    "",
-                    "/*this.getUserFormPanel().loadRecord(Ext.create('UserApp.model.UserModel'));",
-                    "this.adding=true;*/",
+                    "this.getUserFormPanel().loadRecord(Ext.create('UserApp.model.UserModel'));",
+                    "this.adding=true;",
                     "win.show();"
                 ],
                 "name": "click",
@@ -281,6 +278,26 @@
             },
             "name": "onDeleteButtonClick",
             "designerId": "c75e42d6-2799-4f33-b2c0-b48eabf59d50"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userFormWindow button[action='cancelUser']",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onCancelButtonClick",
+                "implHandler": [
+                    "this.getUserFormWindow().close();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onCancelButtonClick",
+            "designerId": "c736d520-efd6-4ca2-89f3-0b97ea4b1341"
         }
     ]
 }

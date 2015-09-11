@@ -46,6 +46,9 @@ Ext.define('UserApp.controller.UserController', {
         },
         "userFormWindow button[action='deleteUser']": {
             click: 'onDeleteButtonClick'
+        },
+        "userFormWindow button[action='cancelUser']": {
+            click: 'onCancelButtonClick'
         }
     },
 
@@ -84,11 +87,8 @@ Ext.define('UserApp.controller.UserController', {
                 win=Ext.create('UserApp.view.UserFormWindow');
 
             }
-        /*add properti ID=user_id*/
-        /*Ext.getCmp('user_id').setValue("0");*/
-
-        /*this.getUserFormPanel().loadRecord(Ext.create('UserApp.model.UserModel'));
-        this.adding=true;*/
+        this.getUserFormPanel().loadRecord(Ext.create('UserApp.model.UserModel'));
+        this.adding=true;
         win.show();
     },
 
@@ -147,6 +147,10 @@ Ext.define('UserApp.controller.UserController', {
         window.location.href = "http://univer/user/index/data?act=delete&"+form.getValues('user_id');
 
         this.getUserDataView().getStore().filter();
+        this.getUserFormWindow().close();
+    },
+
+    onCancelButtonClick: function(button, e, eOpts) {
         this.getUserFormWindow().close();
     }
 

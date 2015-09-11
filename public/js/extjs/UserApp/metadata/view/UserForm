@@ -26,6 +26,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "emptyText": "Если новый пользователь -> id=0",
                 "fieldLabel": "user_id",
                 "id": "user_id",
                 "layout|anchor": "100%",
@@ -42,6 +43,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "emptyText": "Имя нового пользователя",
                 "fieldLabel": "user_name",
                 "layout|anchor": "100%",
                 "name": "user_name"
@@ -57,6 +59,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "emptyText": "Образование нового пользователя",
                 "fieldLabel": "user_educ",
                 "layout|anchor": "100%",
                 "name": "user_educ",
@@ -79,6 +82,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "emptyText": "Город нового пользователя",
                 "fieldLabel": "city_name",
                 "layout|anchor": "100%",
                 "name": "city_name",
